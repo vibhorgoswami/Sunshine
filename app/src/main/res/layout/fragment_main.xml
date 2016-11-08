@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.govibs.sunshine.ForecastFragment">
+
+
+    <TextView
+        android:id="@+id/tvTodayTitle"
+        style="@style/TextAlignmentFill"
+        android:layout_alignParentTop="true"
+        android:text="@string/text_title_today"
+        android:textSize="@dimen/text_title_size" />
+
+    <TextView
+        android:id="@+id/tvTempMax"
+        style="@style/TextAlignmentLimit"
+        android:text="@string/text_temp"
+        android:layout_below="@id/tvTodayTitle" />
+
+    <TextView
+        android:id="@+id/tvTempMin"
+        style="@style/TextAlignmentLimit"
+        android:text="@string/text_temp"
+        android:layout_below="@id/tvTempMax" />
+
+    <ImageView
+        android:id="@+id/ivWeatherIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignTop="@id/tvTempMax"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/text_content_weather_icon"/>
+
+    <ListView
+        android:id="@+id/listview_forecast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTempMin"/>
+
+</RelativeLayout>
